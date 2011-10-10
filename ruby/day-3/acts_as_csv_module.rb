@@ -1,14 +1,13 @@
 module ActsAsCsv
   
   class CsvRow
-    attr :contents, :headers
     def initialize(headers, contents)
       @headers = headers
       @contents = contents
     end
     
     def method_missing(method)
-      index = headers.index(method.to_s)
+      index = @headers.index(method.to_s)
       @contents[index]
     end
   end
@@ -60,4 +59,5 @@ m = RubyCsv.new
 puts m.headers.inspect
 puts m.csv_contents.inspect
 
-m.each {|row| puts row.one}
+m.each {|row| puts row.id}
+m.each {|row| puts row.name}
