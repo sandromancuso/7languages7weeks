@@ -1,0 +1,3 @@
+Car := Object clone
+Car make := "Ferrari"
+Car make println
