@@ -8,6 +8,6 @@ food_type(twinkie, dessert).
 flavor(sweet, dessert).
 flavor(savory, meat).
 flavor(savory, cheese).
-flovor(sweet, soda).
+flavor(sweet, soda).
 
 food_flavor(X, Y) :- food_type(X, Z), flavor(Y, Z).
